@@ -35,8 +35,12 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((total, item) => {
+    return total +item.price
 
+}, 0)
+
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,6 +58,14 @@ const cart = [
 */
 
 //CODE HERE
+
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let CartTotal = summedPrice
+    let taxValue = CartTotal * (1 * tax)
+    let FinalValue = taxValue - couponValue
+    return FinalValue
+}
+console.log(calcFinalPrice(27,.25,.10))
 
 
 
@@ -80,6 +92,18 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    
+Customer Object(name,address,number,payment) {
+
+    Name: {String},
+    Address: {String},
+    Number: {String},
+    Payment: {String}
+}
+Each of the properties above use string data types because they carry a series of characters.
+Each of these properties are neccessary for capturing data for customer payment,
+location, contact information.
+
 */
 
 /*
@@ -88,3 +112,12 @@ const cart = [
 */
 
 //CODE HERE
+
+customerCart = {
+    Name: `Yazi`,
+    Address: `111 Blu Lane`,
+    Number: `202-777-9311`,
+    Payment: `Bisa`
+
+}
+

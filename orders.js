@@ -31,7 +31,21 @@
 
 //CODE HERE
 
+class Ticket{
+    constructor(items,orderTime,customerId, status){
+    this.items = items
+    this.orderTime = orderTime
+    this.customerId = customerId
+    this.status = `queued`
+    }
 
+    
+    updateStatus(newStatus){
+        console.log(`${newStatus} is now ${this.status}`)
+}
+}
+let pending = updateStatus("recieving", ["pending"]);
+pending.updateStatus() 
 
 /*
     Create a new instance of your class.

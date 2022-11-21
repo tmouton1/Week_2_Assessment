@@ -32,13 +32,15 @@
 
 //CODE HERE
 
-const pizza =  {
-    name: `${string}`,
-    price: `${Number}`,
-    category: '${string}',
-    popularity: 
-
+const pizza = {
+    name: `supreme`,
+    price: 14.99,
+    category: `dinner`,
+    popularity: `10`,
+    rating: `8`,
+    tags: [`family size`, `share`,`meat`,`spicy`]
 }
+
 
 
 
@@ -52,6 +54,7 @@ const pizza =  {
 
 //CODE HERE
 
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -62,7 +65,7 @@ const pizza =  {
 
 //CODE HERE
 
-
+console.log(pizza.tags[1])
 /*
     Third, destructure the price off of the
     pizza object.
@@ -70,7 +73,20 @@ const pizza =  {
     Print the value of your new price variable.
 */
 
+
 //CODE HERE
+
+pizza.price = `12.99`
+console.log(pizza.price)
+
+let price = newPrice = 12.99;
+
+priceTwo = price
+price = priceTwo
+priceTwo = newPrice
+
+console.log(newPrice)
+
 
 
 /*
@@ -81,6 +97,15 @@ const pizza =  {
 */
 
 //CODE HERE
+
+let category = newCategory = `lunch`
+
+categoryTwo = category
+category = categoryTwo
+categoryTwo = newCategory
+
+console.log(newCategory)
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -97,6 +122,44 @@ const pizza =  {
 
 //CODE HERE
 
+let foodArr = [
+    {
+        name: "chicken",
+        price: 30,
+        category: "poultry",
+        spice: 4,
+        tags: ["gluten-free", "tasty", "savory"]
+    },
+    {
+        name: "steak",
+        price: 40,
+        category: "meat",
+        spice: 1,
+        tags: ["hearty", "local", "select"]
+    },
+    {
+        name: "scallops",
+        price: 35,
+        category: "seafood",
+        spice: 5,
+        tags: ["healthy", "chef special", "classic"]
+    },
+    {
+        name: "salmon",
+        price: 32,
+        category: "seafood",
+        spice: 1,
+        tags: ["wild-caught", "sustainable", "healthy"]
+    },
+    {
+        name: "carrot cake",
+        price: 10,
+        category: "dessert",
+        spice: 0,
+        tags: ["sweet", "delicious", "chef special"]  
+    }
+]
+  
 
 
 //////////////////PROBLEM 4////////////////////
@@ -113,7 +176,12 @@ const pizza =  {
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((foodArr) => foodArr.tags ='chef special' )
+{
+
+}
+
+console.log(filteredFood)
 
 
 
@@ -157,6 +225,17 @@ const pizza =  {
 */
 
 //CODE HERE
+
+
+const filterByProperty = foodArr.filter(foodArr) 
+
+    for (foodArr.price)
+    {
+  if (foodArr.price <= 15)
+  return false
+        }
+    
+
 
 
 /*

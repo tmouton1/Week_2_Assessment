@@ -22,6 +22,23 @@
 //CODE HERE
 
 
+    
+class employee {
+    constructor(name,shift){
+
+        this.name = name; 
+        this.shift = shift;
+
+}
+
+getSchedule(){
+    console.log(`${this.name}, works on ${this.shift}`)
+
+}
+}
+
+let Brenda = new employee("Brenda", ["Monday at 2pm`"]);
+Brenda.getSchedule()
 
 /*
     Create a new instance of your class.
@@ -35,6 +52,12 @@
 
 //CODE HERE
 
+
+
+let empOne = new employee("Jess",['weekday mornings, weekday afternoons'])
+
+
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -42,7 +65,7 @@
 
 //CODE HERE
 
-
+empOne.getSchedule()
 /*
     Make a copy of the empOne object
     using the spread operator.
@@ -56,6 +79,14 @@
 */
 
 //CODE HERE
+
+
+let empTwo = {...empOne, name: "Nick"}
+
+    empTwo.name = "Nick"
+
+console.log(empTwo)
+
 
 
 
@@ -84,6 +115,24 @@
 
 //CODE HERE
 
+class Manager extends employee {
+    constructor(name,shift,employees){
+        super(name,shift)
+        this.employees = [...employees]
+
+       
+    }
+    getEmployees(){
+    console.log(`${this.name} manages ${this.employees}`)
+
+    }
+    addEmployee(emp){ 
+        this.employees.push(emp);{
+            console.log(`${emp} is added to ${this.name}'s list`)
+        }
+
+    }
+}
 
 
 /*
@@ -99,13 +148,19 @@
 
 //CODE HERE
 
+let manager = new Manager("Winston",["weekday mornings","weekday afternoons"],['Cece','Schmidt']) 
+
 
 /*
     Call the `getEmployees` method on the
     `manager` object.  
+
+    
 */
 
 //CODE HERE
+
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -115,6 +170,7 @@
 
 //CODE HERE 
 
+manager.addEmployee('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -122,3 +178,4 @@
 */
 
 //CODE HERE
+manager.getEmployees
