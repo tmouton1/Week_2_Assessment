@@ -36,7 +36,6 @@ class Ticket{
     this.items = items
     this.orderTime = orderTime
     this.customerId = customerId
-    this.status = `queued`
     }
 
     
